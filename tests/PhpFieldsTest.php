@@ -14,7 +14,7 @@ use Corcel\Model\Collection\MetaCollection;
 
 class PhpFieldsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -56,7 +56,7 @@ class PhpFieldsTest extends TestCase
             'meta_value' => $internal,
         ]));
 
-        return $post;    
+        return $post;
     }
 
     public function testPhpFieldIntegration()

@@ -15,7 +15,7 @@ class CorcelIntegrationTest extends TestCase
 {
     protected $acfFields;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->acfFields = [
@@ -48,7 +48,7 @@ class CorcelIntegrationTest extends TestCase
             'meta_value' => $internal,
         ]));
 
-        return $post;    
+        return $post;
     }
 
     public function testIfCorcelIntegrationIsWorking()

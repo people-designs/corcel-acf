@@ -4,7 +4,6 @@ namespace Tbruckmaier\Corcelacf;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Greabock\Tentacles\EloquentTentacle;
 
 /**
  * This trait can be used with any Corcel model. It contains helper methods to
@@ -13,9 +12,6 @@ use Greabock\Tentacles\EloquentTentacle;
  */
 trait AcfTrait
 {
-    // "Monkey-patching for eloquent models"
-    use EloquentTentacle;
-
     protected static $acfRelations = [];
 
     protected static function bootTraits()
@@ -48,7 +44,8 @@ trait AcfTrait
 
             // create a acf relation dynamically
             $methodName = 'acf_' . $relationName;
-            self::addExternalMethod($methodName, function () use ($relationName, $config) {
+
+            self::macro($methodName, function () use ($relationName, $config) {
                 return $this->hasAcf($relationName, $config);
             });
         }
