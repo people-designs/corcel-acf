@@ -2,6 +2,8 @@
 
 namespace Tbruckmaier\Corcelacf\Models;
 
+use Illuminate\Support\Arr;
+
 class Choice extends Generic
 {
     use Traits\SerializedSometimes;
@@ -14,6 +16,6 @@ class Choice extends Generic
         }
 
         // otherwise the field "multiple" specifies
-        return !empty(array_get($this->config, 'multiple'));
+        return !empty(Arr::get($this->config, 'multiple'));
     }
 }

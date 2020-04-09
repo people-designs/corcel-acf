@@ -2,6 +2,7 @@
 
 namespace Tbruckmaier\Corcelacf\Models;
 
+use Illuminate\Support\Arr;
 use Corcel\Model\Post as CorcelPost;
 
 class Post extends BaseField
@@ -15,7 +16,7 @@ class Post extends BaseField
      */
     public function getIsSerializedAttribute() : bool
     {
-        return !empty(array_get($this->config, 'multiple'));
+        return !empty(Arr::get($this->config, 'multiple'));
     }
 
     /**

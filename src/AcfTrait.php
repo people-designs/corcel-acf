@@ -4,6 +4,7 @@ namespace Tbruckmaier\Corcelacf;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Arr;
 
 /**
  * This trait can be used with any Corcel model. It contains helper methods to
@@ -35,7 +36,7 @@ trait AcfTrait
             // use with acf-json). Or the acf field name is the array key, and
             // the value is the config array
             if (is_array($relationData)) {
-                $relationName = array_get($relationData, 'name');
+                $relationName = Arr::get($relationData, 'name');
                 $config = $relationData;
             } else {
                 $relationName = $relationData;
