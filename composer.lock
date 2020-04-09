@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "146ce72a7a834c4b4bb19aa991141bd7",
+    "content-hash": "7a7bf9f9f253c2704a4d51693199a3a5",
     "packages": [
+        {
+            "name": "corcel/acf",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/corcel/acf.git",
+                "reference": "813ffb4e29409ebadcbd9bd01958fc97aa0f67a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/corcel/acf/zipball/813ffb4e29409ebadcbd9bd01958fc97aa0f67a1",
+                "reference": "813ffb4e29409ebadcbd9bd01958fc97aa0f67a1",
+                "shasum": ""
+            },
+            "require": {
+                "jgrossi/corcel": "^3.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Corcel\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Junior Grossi",
+                    "email": "juniorgro@gmail.com",
+                    "homepage": "http://jgrossi.com"
+                }
+            ],
+            "description": "Advanced Custom Field (ACF) plugin for Corcel",
+            "homepage": "http://github.com/corcel/acf",
+            "time": "2019-09-13T13:50:24+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "1.3.1",

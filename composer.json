@@ -15,7 +15,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "jgrossi/corcel": "~3"
+    "jgrossi/corcel": "~3",
+    "corcel/acf": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~8",
