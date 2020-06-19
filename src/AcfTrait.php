@@ -46,8 +46,8 @@ trait AcfTrait
             // create a acf relation dynamically
             $methodName = 'acf_' . $relationName;
 
-            self::macro($methodName, function () use ($relationName, $config) {
-                return $this->hasAcf($relationName, $config);
+            self::resolveRelationUsing($methodName, function ($post) use ($relationName, $config) {
+                return $post->hasAcf($relationName, $config);
             });
         }
     }
