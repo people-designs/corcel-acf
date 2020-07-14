@@ -4,6 +4,7 @@ namespace Tbruckmaier\Corcelacf\Models;
 
 use Illuminate\Support\Arr;
 use Corcel\Model\Term as CorcelTerm;
+use Illuminate\Support\Arr;
 
 class Term extends BaseField
 {

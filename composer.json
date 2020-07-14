@@ -1,5 +1,5 @@
 {
-  "name": "people-designs/corcel-acf",
+  "name": "tbruckmaier/corcel-acf",
   "description": "Advanced Custom Field (ACF) plugin for Corcel",
   "homepage": "http://github.com/tbruckmaier/corcel-acf",
   "license": "MIT",
@@ -14,14 +14,14 @@
     }
   ],
   "require": {
-    "php": ">=7.1",
-    "jgrossi/corcel": "~4",
-    "callum-ne6/acf": "^2.0"
+    "php": ">=7.0.0",
+    "jgrossi/corcel": ">=2.5",
+    "p-andrey/tentacles": "^1.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "~8",
-    "orchestra/testbench": "~4",
-    "orchestra/database": "~4"
+    "phpunit/phpunit": ">=6.0",
+    "orchestra/testbench": ">=3.4",
+    "orchestra/database": ">=3.4"
   },
   "autoload": {
     "psr-4": {

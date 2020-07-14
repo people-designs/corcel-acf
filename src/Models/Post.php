@@ -4,6 +4,7 @@ namespace Tbruckmaier\Corcelacf\Models;
 
 use Illuminate\Support\Arr;
 use Corcel\Model\Post as CorcelPost;
+use Illuminate\Support\Arr;
 
 class Post extends BaseField
 {

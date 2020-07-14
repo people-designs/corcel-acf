@@ -4,6 +4,7 @@ namespace Tbruckmaier\Corcelacf;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Greabock\Tentacles\EloquentTentacle;
 use Illuminate\Support\Arr;
 
 /**
@@ -13,6 +14,9 @@ use Illuminate\Support\Arr;
  */
 trait AcfTrait
 {
+    // "Monkey-patching for eloquent models"
+    use EloquentTentacle;
+
     protected static $acfRelations = [];
 
     protected static function bootTraits()
@@ -45,9 +49,8 @@ trait AcfTrait
 
             // create a acf relation dynamically
             $methodName = 'acf_' . $relationName;
-
-            self::resolveRelationUsing($methodName, function ($post) use ($relationName, $config) {
-                return $post->hasAcf($relationName, $config);
+            self::addExternalMethod($methodName, function () use ($relationName, $config) {
+                return $this->hasAcf($relationName, $config);
             });
         }
     }

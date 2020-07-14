@@ -2,8 +2,8 @@
 
 namespace Tbruckmaier\Corcelacf\Models;
 
-use Illuminate\Support\Arr;
 use Corcel\Model\User as CorcelUser;
+use Illuminate\Support\Arr;
 
 class User extends BaseField
 {
@@ -11,7 +11,7 @@ class User extends BaseField
 
     public function getIsMultipleAttribute() : bool
     {
-        return (bool) Arr::get($this->config, 'multiple');
+        return (bool)Arr::get($this->config, 'multiple');
     }
 
     public function getIsSerializedAttribute() : bool

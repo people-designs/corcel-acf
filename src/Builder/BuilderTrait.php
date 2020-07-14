@@ -2,8 +2,8 @@
 
 namespace Tbruckmaier\Corcelacf\Builder;
 
-use Illuminate\Support\Arr;
 use Tbruckmaier\Corcelacf\Models\BaseField;
+use Illuminate\Support\Arr;
 
 trait BuilderTrait
 {
@@ -29,12 +29,12 @@ trait BuilderTrait
 
         // now check if we have sub_fields/layouts, and populate the main fields
         // relation
-        if (array_has($attributes, 'sub_fields')) {
+        if (Arr::has($attributes, 'sub_fields')) {
 
             // group and repeater. Sub fields can be taken directly from the
             // config array
             $subFieldConfigs = collect(Arr::get($attributes, 'sub_fields'));
-        } elseif (array_has($attributes, 'layouts')) {
+        } elseif (Arr::has($attributes, 'layouts')) {
             // flexible content field. Here the sub fields are encapsulated
             // twice, the fc config has an array "layouts", and each layout has
             // multiple "sub_fields". We need to get a flat list of sub fields,
